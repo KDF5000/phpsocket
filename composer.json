@@ -12,6 +12,6 @@
         }
     ],
     "autoload": {
-        "psr-4": {"PhpSpcket\\": "src/PhpSocket"}
+        "psr-4": {"PhpSocket\\": "src/PhpSocket"}
     }
 }
