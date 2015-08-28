@@ -62,7 +62,7 @@ class SocketClient{
     /**
      * @return bool
      */
-    public function initSocket(){
+    private function initSocket(){
         $this->socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
         if($this->socket === false){
             return false;
@@ -75,6 +75,9 @@ class SocketClient{
      */
 
     public function connect(){
+        if($this->initSocket() === false){
+            return false;
+        }
         if($this->socket == null){
             return false;
         }
